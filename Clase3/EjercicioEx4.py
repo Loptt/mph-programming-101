@@ -17,11 +17,10 @@ if numero > 0:
         if numero < 100:
             #menor a 100
             print("es un numero positivo, impar y menor a 100")
-        elif numero > 100:
+        else:
             #mayor a 100
             print("es un numero positivo, impar y mayor a 100")
-        else: 
-            print("el numero es 100")
+
 elif numero < 0:
     #negativo
     if numero % 2 == 0:
