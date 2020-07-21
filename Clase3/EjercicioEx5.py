@@ -1,11 +1,11 @@
 lado = float(input())
 diagonal = float(input())
-eps = 0.0001
+epsilon = 0.001
 
 #print( (2 * lado * lado)  ** 0.5)
 resta = diagonal - ( 2 * lado * lado ) ** ( 0.5 )
 #print(resta)
-if resta <= eps and resta >= -eps:
+if resta <= epsilon and resta >= -epsilon:
     print("es cuadrado")
 else:
-    print("es rectangulo")
+    print("no es un cuadrado")

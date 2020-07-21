@@ -1,11 +1,8 @@
 mes = input()
 
 #febrero 28
-
 #enero marzo mayo julio agosto octubre diciembre 31
-
 #abril junio septiembre noviembre 30
-
 
 if mes == 'febrero':
     print(28)
