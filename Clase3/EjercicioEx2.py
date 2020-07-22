@@ -1,3 +1,5 @@
+print("por favor introduce un dia de la semana")
+
 diaDeLaSemana = input()
 
 if diaDeLaSemana == 'lunes':

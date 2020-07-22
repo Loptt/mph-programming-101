@@ -1,4 +1,4 @@
-numero = int(input())
+numero = int(input("por favor ingrese un numero: "))
 
 if numero > 0:
     #positivo
@@ -11,7 +11,7 @@ if numero > 0:
             #mayor a 100
             print("es un numero positivo, par y mayor a 100")
         else: 
-            print("el numero es 100")
+            print("es un numero positivo, par y es 100")
     else:
         #impar
         if numero < 100:
