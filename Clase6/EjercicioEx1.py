@@ -1,2 +1,9 @@
 def div243(num):
-    return num%243
+    booleano = (num % 243 == 0)
+    if booleano:
+        return True
+    else: 
+        return False
+    #return num % 243 == 0
+
+print( div243(243 * 3) )

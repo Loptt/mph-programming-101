@@ -2,4 +2,4 @@ def esPalindromo(palabra):
     volteado = ''.join(reversed(palabra))
     return palabra == volteado
 
-print(esPalindromo("ana"))
+print(esPalindromo("1234"))

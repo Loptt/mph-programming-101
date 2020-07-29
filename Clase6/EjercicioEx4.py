@@ -17,4 +17,4 @@ def stringsExclusivos(strA, strB):
     casoDos = onlyVocals(strB) and onlyCons(strA)
     return casoUno or casoDos
 
-print(stringsExclusivos("aeiiiiaaauuuu", "xklklkmsa"))
+print(stringsExclusivos("aeu", "trtrtrtrtr"))

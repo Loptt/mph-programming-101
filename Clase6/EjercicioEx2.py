@@ -1,4 +1,8 @@
 def multiplicarString(str, num):
-    return str*num
+    vacio = ""
+    for i in range(0,num):
+        vacio+=str
+    #return str*num
+    return vacio
 
-print(multiplicarString("hola",2))
+print(multiplicarString("Adios",10))
