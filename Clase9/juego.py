@@ -34,40 +34,52 @@ def moverSerpiente(direccion, serpiente):
     serpiente.insert(0, (nuevaCabezaX,nuevaCabezaY))
 
 
+def main():
+    global cabezaX
+    global cabezaY
+    global width 
+    global height
+    global vel
+    global serpiente
+    global direccion
+    global running
+    global win
+    global SCREENWIDTH
+    while running:
+        pygame.time.delay(100)
 
-while running:
-    pygame.time.delay(100)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+        keys = pygame.key.get_pressed()
+        
+        
+        
+        if keys[pygame.K_LEFT]:
+            direccion = "IZQUIERDA"
+            cabezaX -= vel
 
-    keys = pygame.key.get_pressed()
-    
-    
-    
-    if keys[pygame.K_LEFT]:
-        direccion = "IZQUIERDA"
-        cabezaX -= vel
+        elif keys[pygame.K_RIGHT]:
+            direccion = "DERECHA"
+            cabezaX += vel
 
-    elif keys[pygame.K_RIGHT]:
-        direccion = "DERECHA"
-        cabezaX += vel
+        elif keys[pygame.K_UP]:
+            direccion = "ARRIBA"
+            cabezaY -= vel
 
-    elif keys[pygame.K_UP]:
-        direccion = "ARRIBA"
-        cabezaY -= vel
+        elif keys[pygame.K_DOWN]:
+            direccion = "ABAJO"
+            cabezaY += vel
+        
+        win.fill((0,0,0))
 
-    elif keys[pygame.K_DOWN]:
-        direccion = "ABAJO"
-        cabezaY += vel
-    
-    win.fill((0,0,0))
+        moverSerpiente(direccion,serpiente)
+        # dibujar a la serpiente  
+        for piece in serpiente:
+            pygame.draw.rect(win, (255,0,0), (piece[0],piece[1], width, height))
+        pygame.display.update() 
+        
+    pygame.quit()
 
-    moverSerpiente(direccion,serpiente)
-    # dibujar a la serpiente  
-    for piece in serpiente:
-        pygame.draw.rect(win, (255,0,0), (piece[0],piece[1], width, height))
-    pygame.display.update() 
-    
-pygame.quit()
+main()
